@@ -1,0 +1,567 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto; }
+
+body {
+  font-family: 'Noto Sans TC', 'Noto Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.5; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  max-width: 1320px;
+  padding: 0 12px;
+  margin: 0 auto; }
+
+.header {
+  background: #AA0601;
+  font-weight: 400;
+  font-style: normal; }
+  .header-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .header .logo {
+    width: 80px;
+    height: 49px;
+    padding: 12px 0; }
+  .header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .header li {
+    padding: 25px 32px; }
+    .header li:first-child {
+      padding-left: 0; }
+    .header li:last-child {
+      padding-right: 0; }
+  .header a {
+    color: #FFFFFF; }
+    .header a:hover {
+      color: #650300; }
+
+/*隱藏 手機板 header*/
+.header-phone {
+  display: none; }
+
+.banner {
+  background-image: url("../img/home-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 787px;
+  text-align: right; }
+  .banner h3 {
+    color: #650300;
+    font-size: 36px;
+    margin-top: 296px; }
+  .banner h1 {
+    color: #650300;
+    font-size: 64px;
+    font-weight: 700; }
+  .banner button {
+    background: #AA0601;
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 6px 12px; }
+    .banner button:hover {
+      background: #650300; }
+
+.service {
+  background: #FBF2F2;
+  padding-bottom: 80px; }
+  .service h2 {
+    margin-top: 80px; }
+  .service h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #650300; }
+  .service p {
+    font-size: 16px; }
+  .service .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 24px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px; }
+    .service .card-item {
+      text-align: center;
+      padding: 0 12px;
+      width: 25%; }
+      .service .card-item h4 {
+        margin-top: 24px; }
+      .service .card-item p {
+        margin-top: 8px;
+        text-align: left; }
+  .service .material-symbols-outlined {
+    color: #650300;
+    font-size: 84px;
+    display: block; }
+
+.classic h2 {
+  margin-top: 80px; }
+
+.classic ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 48px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -12px;
+  margin-left: -12px; }
+  .classic ul li {
+    padding: 0 12px;
+    width: calc(100%/3); }
+  .classic ul li h2 {
+    margin-top: 8px;
+    color: #AA0601; }
+
+.design {
+  background-image: url(../img/index-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 80px;
+  padding-bottom: 80px; }
+  .design-double {
+    background-image: url(../img/home-section4-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 240px; }
+  .design-youth {
+    background-image: url(../img/home-section4-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 240px; }
+  .design h2 {
+    color: #FFFFFF;
+    margin-top: 80px; }
+  .design ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 48px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .design li {
+    width: 50%; }
+    .design li h2 {
+      background: #FFFFFF;
+      font-family: "Roboto";
+      color: #AA0601;
+      font-style: italic;
+      font-weight: 900;
+      margin-top: 0;
+      padding: 8px 0; }
+
+.recommendation h2 {
+  margin-top: 80px; }
+
+.recommendation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 48px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .recommendation ul li {
+    margin: 0 12px;
+    -webkit-box-shadow: 0px 2px 6px #00000029;
+            box-shadow: 0px 2px 6px #00000029;
+    width: 23.61%; }
+    .recommendation ul li:first-child {
+      margin-left: 0; }
+    .recommendation ul li:last-child {
+      margin-right: 0; }
+    .recommendation ul li span {
+      margin-top: 72px;
+      display: block; }
+
+.recommendation .card-item-content {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px; }
+  .recommendation .card-item-content span {
+    font-size: 14px;
+    color: #707070; }
+
+.contact {
+  margin-top: 80px;
+  background-color: #FBF2F2; }
+  .contact h2 {
+    padding-top: 80px; }
+  .contact form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0 6px; }
+    .contact form h4 {
+      margin-top: 48px;
+      font-size: 20px; }
+    .contact form .form-group label {
+      display: block; }
+    .contact form .form-group input {
+      width: 100%;
+      height: 36px; }
+    .contact form .form-group textarea {
+      width: 100%; }
+    .contact form button {
+      background: #AA0601;
+      color: #FFFFFF;
+      padding: 16px 176px;
+      margin: 0 auto;
+      font-family: 'Noto Sans TC';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      display: block;
+      margin-top: 48px;
+      margin-bottom: 80px; }
+      .contact form button:hover {
+        background: #650300; }
+
+.footer {
+  background: #AA0601;
+  color: #FFFFFF;
+  margin-top: auto !important;
+  /* 隱藏手機板的 icon圖示*/ }
+  .footer-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 48px; }
+  .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer ul.footer-contact {
+    display: block; }
+    .footer ul.footer-contact a {
+      color: #FFFFFF;
+      font-size: 36px; }
+  .footer ul.footer-icon-phone {
+    display: none; }
+  .footer-nav li {
+    padding: 0 24px;
+    font-size: 16px; }
+    .footer-nav li:first-child {
+      padding-left: 0; }
+    .footer-nav li:last-child {
+      padding-right: 0; }
+  .footer-icon li, .footer-icon-phone li {
+    padding: 0 16px; }
+    .footer-icon li:first-child, .footer-icon-phone li:first-child {
+      padding-left: 0; }
+    .footer-icon li:last-child, .footer-icon-phone li:last-child {
+      padding-right: 0; }
+  .footer-contact {
+    margin-top: 24px; }
+    .footer-contact li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .footer-contact .icon-mail {
+      padding-bottom: 32px;
+      border-bottom: 1px solid #FFFFFF; }
+  .footer-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 32px;
+    padding-bottom: 32px; }
+    .footer-bottom li {
+      font-size: 14px; }
+      .footer-bottom li:last-child {
+        padding-left: 48px; }
+  .footer img {
+    width: 48px;
+    height: 48px; }
+  .footer .material-symbols-outlined {
+    font-size: 36px;
+    margin-right: 22px; }
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+  color: #650300;
+  text-align: center; }
+
+button {
+  cursor: pointer;
+  line-height: 1.5;
+  border: 0; }
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.mb-8 {
+  margin-bottom: 8px; }
+
+.mt-8 {
+  margin-top: 8px; }
+
+.mt-16 {
+  margin-top: 16px; }
+
+.mt-24 {
+  margin-top: 24px; }
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px; }
+  .banner {
+    background-image: url(../img/home-header-sm.png); }
+  .service .card-item {
+    width: 50%; }
+    .service .card-item:nth-last-child(1), .service .card-item:nth-last-child(2) {
+      margin-top: 24px; }
+  .classic ul li {
+    width: 100%;
+    text-align: center; }
+    .classic ul li:nth-child(n+1) {
+      margin-top: 24px; }
+    .classic ul li:nth-child(1) {
+      margin-top: 0; }
+    .classic ul li img {
+      width: 50%; }
+  .design {
+    background-image: url(../img/index-bg-md.png); }
+    .design ul li {
+      width: 100%; }
+      .design ul li:nth-child(2) {
+        margin-top: 24px; }
+  .recommendation ul li {
+    width: 48.27%; }
+    .recommendation ul li:nth-child(2), .recommendation ul li:nth-child(4) {
+      margin-left: 12px;
+      margin-right: 0; }
+    .recommendation ul li:nth-child(1), .recommendation ul li:nth-child(3) {
+      margin-left: 0px;
+      margin-right: 12px; }
+    .recommendation ul li:nth-child(3), .recommendation ul li:nth-child(4) {
+      margin-top: 24px; }
+  .contact form {
+    width: 81.25%;
+    padding: 0; }
+    .contact form h4 {
+      font-size: 16px; }
+    .contact form button {
+      padding: 16px 136px; }
+  .footer-icon li,
+  .footer-icon-phone li {
+    padding: 0 8px; }
+  .footer img {
+    width: 40px;
+    height: 40px; } }
+
+@media (max-width: 414px) {
+  .container {
+    max-width: 372px; }
+  .header {
+    display: none; }
+  .header-phone {
+    display: block; }
+    .header-phone ul {
+      text-align: center; }
+    .header-phone img {
+      width: 80px;
+      height: 49px; }
+    .header-phone .logo {
+      width: inherit;
+      height: inherit; }
+  .header-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .header-group .logo {
+      text-align: center; }
+  .header-group ul li {
+    width: 50%;
+    padding: 12px 62px;
+    font-size: 16px;
+    white-space: nowrap;
+    border: 1px solid #FFFFFF; }
+    .header-group ul li:first-child, .header-group ul li:last-child {
+      padding: 12px 62px; }
+  .banner {
+    height: 396px; }
+    .banner h3 {
+      font-size: 16px;
+      margin-top: 144px; }
+    .banner h1 {
+      font-size: 24px; }
+  .service h2 {
+    margin-top: 40px; }
+  .service .card-item {
+    width: 100%; }
+    .service .card-item:nth-child(1), .service .card-item:nth-child(2) {
+      margin-top: 24px; }
+  .classic h2 {
+    margin-top: 40px; }
+  .classic ul {
+    margin-top: 24px; }
+    .classic ul li img {
+      width: 100%; }
+    .classic ul li h2 {
+      font-size: 48px; }
+  .design-double {
+    background-image: url(../img/home-section4-1-sm.png); }
+  .design-youth {
+    background-image: url(../img/home-section4-2-sm.png); }
+  .recommendation ul li {
+    width: 100%; }
+    .recommendation ul li:nth-child(n) {
+      margin-left: 0;
+      margin-right: 0; }
+    .recommendation ul li:nth-child(2), .recommendation ul li:nth-child(3), .recommendation ul li:nth-child(4) {
+      margin-top: 24px; }
+  .contact form {
+    width: 100%; }
+  .footer {
+    /*隱藏 PC 跟 平板的 footer icon*/
+    /*使用手機板的 footer icon phone*/ }
+    .footer-top {
+      display: none; }
+    .footer-top-phone li.icon-tel {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .footer-top-phone .contact-data {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .footer ul.footer-contact {
+      display: block; }
+      .footer ul.footer-contact a {
+        color: #FFFFFF;
+        font-size: 16px; }
+    .footer ul.footer-icon-phone {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .footer-contact .icon-mail {
+      padding-bottom: 24px; }
+    .footer-bottom {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: 16px; }
+      .footer-bottom ul {
+        display: block; }
+      .footer-bottom li {
+        font-size: 16px; }
+        .footer-bottom li:nth-last-child(1), .footer-bottom li:nth-last-child(2) {
+          padding-left: 0;
+          margin-top: 8px; }
+    .footer-icon li,
+    .footer-icon-phone li {
+      padding: 0 4px; }
+    .footer img {
+      width: 24px;
+      height: 24px; }
+  h2 {
+    font-size: 24px; } }
+
+/*# sourceMappingURL=all.css.map */
