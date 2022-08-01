@@ -1,0 +1,358 @@
+body {
+  font-family: 'Noto Sans TC', 'Noto Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* 怕 maain 區塊不夠 導致footer 浮空 沒有置底 會有空白區塊*/
+  // display: flex;
+  // flex-direction: column;
+  // min-height: 100vh;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.header {
+  background: $primary-light;
+  font-weight: 400;
+  font-style: normal;
+
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: block;
+    width: 80px;
+  }
+
+  ul {
+    display: flex;
+    color: $white;
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+  li a {
+    color: $white;
+    padding: 25px 32px;
+    display: block;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+
+}
+
+/*隱藏 手機板 header*/
+.header-phone {
+  display: none;
+}
+
+
+
+
+
+.footer {
+  background: $primary-light;
+  color: $white;
+  padding-top: 48px;
+  padding-bottom: 32px;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  ul.footer-contact {
+    display: block;
+
+    a {
+      color: $white;
+      font-size: 36px;
+    }
+  }
+
+  /* 隱藏手機板的 icon圖示*/
+  ul.footer-icon-phone {
+    display: none;
+  }
+
+  &-nav {
+    li a {
+      padding: 0 24px;
+      display: block;
+    }
+  }
+
+  &-icon,
+  &-icon-phone {
+    li {
+      padding: 0 16px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &-contact {
+    margin-top: 24px;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon-mail {
+      padding-bottom: 32px;
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+
+    li {
+      font-size: 14px;
+
+      &:last-child {
+        padding-left: 48px;
+      }
+    }
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+  }
+
+
+
+  .material-symbols-outlined {
+    font-size: 36px;
+    margin-right: 22px;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+  color: $primary-dark;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  line-height: 1.5;
+  border: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.mb-8 {
+  margin-bottom: 8px !important;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.mt-24 {
+  margin-top: 24px !important;
+}
+
+.pe-0 {
+  padding-right: 0 !important;
+}
+
+.ps-0 {
+  padding-left: 0 !important;
+}
+
+
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 372px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .header-phone {
+    display: block;
+
+    ul {
+      text-align: center;
+    }
+
+    .ham-icon {
+      color: #FFFFFF;
+      .material-symbols-outlined{
+        font-size: 40px;
+      }
+    }
+    .dropdown {
+      background: #AA0601;
+      position: absolute;
+      left: 0;
+      top:100%;
+      width: 100%;
+      max-height: 0px;
+      transition: all 0.8s;
+      overflow: hidden;
+      z-index: 120;
+    }
+    .dropdown.active {
+      max-height: 200px;
+    }
+
+  }
+
+  .header-group {
+    position: relative;
+    padding: 0 12px;
+    .logo {
+      text-align: center;
+      padding: 16px 0;
+    }
+
+    ul li {
+      width: 50%;
+      white-space: nowrap;
+      border: 1px solid $white;
+      // &:first-child,
+      // &:last-child {
+      //   padding: 12px 62px;
+      // }
+    }
+
+    ul li a {
+      padding: 12px 62px;
+      font-size: 16px;
+      display: block;
+    }
+  }
+
+  .footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    /*隱藏 PC 跟 平板的 footer icon*/
+    &-top {
+      display: none;
+    }
+
+    /*使用手機板的 footer icon phone*/
+    &-top-phone {
+      li.icon-tel {
+        justify-content: space-between;
+      }
+
+      .contact-data {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    ul.footer-contact {
+      display: block;
+      margin-top: 0;
+
+      a {
+        color: $white;
+        font-size: 16px;
+      }
+    }
+
+
+    ul.footer-icon-phone {
+      display: flex;
+    }
+
+    &-contact .icon-mail {
+      padding-bottom: 24px;
+    }
+
+    &-bottom {
+      flex-direction: column;
+      margin-top: 16px;
+
+      ul {
+        display: block;
+      }
+
+      li {
+        font-size: 16px;
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+          padding-left: 0;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    &-icon li,
+    &-icon-phone li {
+      padding: 0 4px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+
+}
