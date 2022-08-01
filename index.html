@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -13,7 +13,9 @@
     rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <title>首頁</title>
+  <title>
+    眼鏡官網
+  </title>
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
@@ -24,12 +26,12 @@
   <div class="header">
     <div class="container">
       <div class="header-group">
-        <div class="logo"><a href="#"><img src="./assets/images/logo-white.png" alt="logo"></a></div>
+        <a class="logo" href="./index.html"><img src="./assets/images/logo-white.png" alt="logo"></a>
         <ul>
-          <li><a href="#">系列鏡框</a></li>
+          <li><a class="ps-0" href="./product.html">系列鏡框</a></li>
           <li><a href="#">門市據點</a></li>
           <li><a href="#">部落格</a></li>
-          <li><a href="#">常見問題</a></li>
+          <li><a class="pe-0" href="#">常見問題</a></li>
         </ul>
       </div>
 
@@ -38,9 +40,16 @@
 
   <div class="header header-phone">
     <div class="header-group">
-      <div class="logo"><a href="#"><img src="./assets/images/logo-white.png" alt="logo"></a></div>
-      <ul>
-        <li><a href="#">系列鏡框</a></li>
+        <a  href="./index.html"><img src="./assets/images/logo-white.png" class="logo" alt="logo"></a>
+        <a href="#" class="ham-icon">
+          <span class="material-symbols-outlined ">
+            menu
+          </span>
+        </a>
+
+
+      <ul class="dropdown">
+        <li><a href="./product.html">系列鏡框</a></li>
         <li><a href="#">門市據點</a></li>
         <li><a href="#">部落格</a></li>
         <li><a href="#">常見問題</a></li>
@@ -49,61 +58,219 @@
   </div>
 
   
-<h1>
-  這是一段話
-</h1>
 
-<div class="box"></div>
+<div class="banner">
+  <div class="container banner-content">
+    <h3>Promise-Desert 2020 早春系列</h3>
+    <h1>看得清，才能看得遠</h1>
+    <button type="button">立即購買</button>
+  </div>
+</div>
 
-
-  <div class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <ul class="footer-nav">
-          <li>首頁</li>
-          <li>系列鏡框</li>
-          <li>門市據點</li>
-          <li>部落格</li>
-          <li>常見問題</li>
-        </ul>
-        <ul class="footer-icon">
-          <li><a href="#"><img src="./assets/images/ic-social-fb.png" alt="fb"></a></li>
-          <li><a href="#"><img src="./assets/images/ic_social_ig.png" alt="ig"></a></li>
-          <li><a href="#"><img src="./assets/images/ic_social_line.png" alt="line"></a></li>
-        </ul>
-      </div>
-
-
-      <div class="footer-top-phone">
-        <ul class="footer-contact">
-          <li class="mb-8 icon-tel">
-            <div class="contact-data">
-              <span class="material-symbols-outlined">call</span><a href="tel:+886-800000000">0800-000-000</a>
-            </div>
-            <ul class="footer-icon-phone">
-              <li><a href="#"><img src="./assets/images/ic-social-fb.png" alt="fb"></a></li>
-              <li><a href="#"><img src="./assets/images/ic_social_ig.png" alt="ig"></a></li>
-              <li><a href="#"><img src="./assets/images/ic_social_line.png" alt="line"></a></li>
-            </ul>
-          </li>
-          <li class="icon-mail"><span class="material-symbols-outlined">mail</span><a
-              href="glasses@business.com">glasses@business.com</a></li>
-        </ul>
-      </div>
-
-
-      <div class="footer-bottom">
-        <p>Copyright © 2020 Glasses.All rights reserved.</p>
-        <ul>
-          <li>隱私權政策</li>
-          <li>服務條款</li>
-        </ul>
-      </div>
-    </div>
+<div class="service">
+  <div class="container">
+    <h2>用專業的心，做專業的事</h2>
+    <ul class="card">
+      <li class="card-item">
+        <span class="material-symbols-outlined">
+          monetization_on
+        </span>
+        <h4>單一價格</h4>
+        <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
+      </li>
+      <li class="card-item">
+        <span class="material-symbols-outlined">
+          schedule
+        </span>
+        <h4>20 分鐘即可取件</h4>
+        <p>為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快 20 分鐘即可完成。</p>
+      </li>
+      <li class="card-item">
+        <span class="material-symbols-outlined">
+          favorite
+        </span>
+        <h4>安心售後服務</h4>
+        <p>我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。</p>
+      </li>
+      <li class="card-item">
+        <span class="material-symbols-outlined">
+          voicemail
+        </span>
+        <h4>關於鏡片</h4>
+        <p>使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
+      </li>
+    </ul>
   </div>
 
-  <script src="./assets/js/vendors.js"></script>
-  <script src="./assets/js/all.js"></script>
+</div>
+
+<div class="classic">
+  <div class="container">
+    <h2>經典系列鏡框</h2>
+    <ul>
+      <!-- <li> <a href="#"><img src="./img/home-section3-1.png" alt="OPTICAL"></a> -->
+      <li> <a href="#"><img src="./assets/images/home-section3-1.png" alt="OPTICAL"></a>
+        <h4>OPTICAL</h4>
+      </li>
+      <li> <a href="#"><img src="./assets/images/home-section3-2.png" alt="SUNGLASSES"></a>
+        <h4>SUNGLASSES</h4>
+      </li>
+      <li> <a href="#"><img src="./assets/images/home-section3-3.png" alt="FUNCTIONAL"></a>
+        <h4>FUNCTIONAL</h4>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="design">
+  <div class="container">
+    <h2>聯名設計鏡框</h2>
+    <ul>
+      <li>
+        <div class="design-double"></div>
+        <h4>DOUBLE A+</h4>
+      </li>
+      <li>
+        <div class="design-youth"></div>
+        <h4>YOUTH</h4>
+      </li>
+    </ul>
+    <!-- <ul>
+      <li> <a href="#"><img src="./img/home-section4-1.png" alt="DOUBLE A+"></a>
+        <h2>DOUBLE A+</h2>
+      </li>
+      <li> <a href="#"><img src="./img/home-section4-2.png" alt="YOUTH"></a>
+        <h2>YOUTH</h2>
+      </li>
+    </ul> -->
+  </div>
+</div>
+
+<div class="recommendation">
+  <div class="container">
+    <h2>顧客推薦</h2>
+    <ul class="card">
+      <li class="card-item"><img src="./assets/images/home-section5-1.png" alt="Jessy">
+        <div class="card-item-content">
+          <title class="mt-16">Jessy</title>
+          <p class="mt-8">眼鏡品質優良，下次還會想來這邊購買！</p>
+          <time>2021/06/20</time>
+        </div>
+
+      </li>
+      <li class="card-item"> <img src="./assets/images/home-section5-2.png" alt="凱倫">
+        <div class="card-item-content">
+          <title class="mt-16">凱倫</title>
+          <p class="mt-8">做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
+          <time>2021/04/18</time>
+        </div>
+
+      </li>
+      <li class="card-item"><img src="./assets/images/home-section5-3.png" alt="悠悠">
+        <div class="card-item-content">
+          <title class="mt-16">悠悠</title>
+          <p class="mt-8">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
+          <time>2020/12/25</time>
+        </div>
+
+      </li>
+      <li class="card-item"> <img src="./assets/images/home-section5-4.png" alt="Kyuan">
+        <div class="card-item-content">
+          <title class="mt-16">Kyuan</title>
+          <p class="mt-8">服務很好，品質沒有任何問題，非常喜歡。</p>
+          <time>2020/10/31</time>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="contact">
+  <div class="container">
+    <h2>聯絡我們</h2>
+    <form action="">
+      <p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+      <div class="form-group mt-24">
+        <label for="name">姓名</label>
+        <input class="mt-8" id="name" name="name" type="text" placeholder="陳小明">
+      </div>
+
+      <div class="form-group mt-16">
+        <label for="tel">聯絡電話</label>
+        <input class="mt-8" type="tel" id="tel" name="tel" placeholder="0912-345-678">
+      </div>
+
+      <div class="form-group mt-16">
+        <label for="email">信箱</label>
+        <input class="mt-8" type="email" id="email" name="email" placeholder="example@email.com">
+      </div>
+
+      <div class="form-group mt-16">
+        <label for="message">意見反應</label>
+        <textarea class="mt-8" name="message" id="message" cols="30" rows="10" placeholder="請輸入你的意見"></textarea>
+      </div>
+
+
+      <input class="mt-16" type="checkbox" name="privacy" id="privacy">
+      <label for="privacy">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+
+      <button type="button">確認送出</button>
+
+
+
+    </form>
+  </div>
+</div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <ul class="footer-nav">
+            <li> <a class="ps-0" href="#">首頁</a></li>
+            <li> <a href="./product.html">系列鏡框</a></li>
+            <li> <a href="#">門市據點</a></li>
+            <li> <a href="#">部落格</a></li>
+            <li> <a class="pe-0" href="#">常見問題</a></li>
+          </ul>
+          <ul class="footer-icon">
+            <li><a href="#"><img src="./assets/images/ic-social-fb.png" alt="fb"></a></li>
+            <li><a href="#"><img src="./assets/images/ic_social_ig.png" alt="ig"></a></li>
+            <li><a href="#"><img src="./assets/images/ic_social_line.png" alt="line"></a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer-top-phone">
+          <ul class="footer-contact">
+            <li class="mb-8 icon-tel">
+              <div class="contact-data">
+                <span class="material-symbols-outlined">call</span><a href="tel:+886-800000000">0800-000-000</a>
+              </div>
+              <ul class="footer-icon-phone">
+                <li><a href="#"><img src="./assets/images/ic-social-fb.png" alt="fb"></a></li>
+                <li><a href="#"><img src="./assets/images/ic_social_ig.png" alt="ig"></a></li>
+                <li><a href="#"><img src="./assets/images/ic_social_line.png" alt="line"></a></li>
+              </ul>
+            </li>
+            <li class="icon-mail"><span class="material-symbols-outlined">mail</span><a
+                href="glasses@business.com">glasses@business.com</a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer-bottom">
+          <p>Copyright © 2020 Glasses.All rights reserved.</p>
+          <ul>
+            <li><a href="#">隱私權政策</a> </li>
+            <li><a href="#">服務條款</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
 </body>
 
 </html>
