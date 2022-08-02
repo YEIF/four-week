@@ -12,7 +12,7 @@
       padding: 24px 0;
       display: block;
       font-weight: 500;
-      font-family: "Roboto";
+      font-family: $en-font-family;
     }
   }
   .tab{
@@ -62,7 +62,7 @@
   h1{
     font-size: 42px;
     text-align: center;
-    font-family: "Roboto";
+    font-family: $en-font-family;
     font-weight: 500;
   }
   h2{
@@ -84,7 +84,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 24px;
-    font-family: "Roboto";
+    font-family: $en-font-family;
     font-weight: 400;
     p{
       color:$primary-light
@@ -115,7 +115,7 @@
     display: block;
     font-size: 18px;
     border: 1px solid #555555;
-    font-family: "Roboto";
+    font-family: $en-font-family;
     color:#555555;
     &:hover{
       background-color: $black;
@@ -132,7 +132,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@include pad{
   .container-full{
     max-width: 100%;
     padding: 0;
@@ -160,7 +160,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@include smobile{
   .frame {
     li a{
       font-size: 16px;
@@ -169,6 +169,17 @@
   .optical{
     padding-top: 40px;
     padding-bottom: 64px;
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 24px;
+    }
+  }
+  .opticalBanner{
+    .opticalBanner-left,.opticalBanner-right{
+      height: 136px;
+    }
   }
   .optical-card{
     gap: 24px 0;

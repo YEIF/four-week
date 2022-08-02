@@ -1,0 +1,190 @@
+.blog-nav {
+  background-color: $primary-dark;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  a {
+    font-size: 20px;
+    text-decoration: none;
+    color: $white;
+    padding: 13px 24px;
+    display: block;
+  }
+
+  .material-symbols-outlined {
+    font-size: 40px;
+    color: $white;
+  }
+}
+
+.blog {
+  padding-top: 96px;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    border-left: 8px solid #9F1213;
+    padding-left: 16px;
+  }
+
+  h2 {
+    font-size: 32px;
+    text-align: left;
+    color: $primary-dark;
+  }
+
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: $en-font-family;
+    color: $black;
+    display: flex;
+    justify-content: space-between;
+
+    time {
+      font-size: 16px;
+      font-weight: 500;
+      display: block;
+      color: #707070;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    padding-top: 16px;
+    color: #555555;
+  }
+
+  &-card {
+    padding-top: 32px;
+    padding-bottom: 124px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px 0;
+  }
+
+  &-card-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 24px;
+
+    a {
+      width: calc(50% - 24px);
+    }
+
+    .blog-card-content {
+      width: 50%;
+      /* 為了讓more 使用 margin-top: auto 讓他推擠到最下面*/
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .more {
+    text-align: right;
+    margin-top: auto;
+
+    a {
+      font-size: 36px;
+      font-weight: 900;
+      text-decoration: none;
+      color: $primary-dark;
+      position: relative;
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+
+      &::after {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        right: 0;
+        content: '';
+        transform: scaleX(0);
+        transform-origin: left;
+        border-bottom: solid 2px $primary-dark;
+        transition: transform 0.3s ease-in-out;
+
+      }
+    }
+  }
+}
+
+
+
+@include pad {
+  .blog {
+    padding-top: 80px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      padding-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+
+    .more {
+      display: none;
+    }
+
+    &-card {
+      gap: 24px 0;
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+  }
+}
+
+
+
+@include smobile{
+  .blog-nav {
+    display: none;
+  }
+
+  .blog {
+    padding-top: 40px;
+
+    h1 {
+      font-size: 24px;
+    }
+    &-card{
+      a{
+        width: 100%;
+      }
+    }
+    .blog-card-content{
+      width: 100%;
+      h2{
+        padding-top: 8px;
+      }
+      p{
+        display: none;
+      }
+    }
+    &-card{
+      padding-bottom: 64px;
+    }
+  }
+
+}

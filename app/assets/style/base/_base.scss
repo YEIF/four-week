@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  // font-family: 'Noto Sans TC', 'Noto Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* 怕 main 區塊不夠 導致footer 浮空 沒有置底 會有空白區塊*/
+  // display: flex;
+  // flex-direction: column;
+  // min-height: 100vh;
+  font-family: $tc-font-family;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+  color: $primary-dark;
+  text-align: center;
+}
+
+img {
+  /*display: block;    去除圖片底下的2-3px空白 */
+  vertical-align: middle;
+  /*也是去除圖片底下的2-3px空白 */
+  max-width: 100%;
+  /* 使之貼其父元素，才不會有圖片過大情況發生 */
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  line-height: 1.5;
+  border: 0;
+  font-family: $tc-font-family;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.mb-8 {
+  margin-bottom: 8px !important;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+.mt-24 {
+  margin-top: 24px !important;
+}
+
+.pe-0 {
+  padding-right: 0 !important;
+}
+
+.ps-0 {
+  padding-left: 0 !important;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 12px;
+  margin: 0 auto;
+
+  @media (max-width: 992px) {
+    max-width: 720px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 372px;
+  }
+}

@@ -1,21 +1,5 @@
-body {
-  font-family: 'Noto Sans TC', 'Noto Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
-  /* 怕 maain 區塊不夠 導致footer 浮空 沒有置底 會有空白區塊*/
-  // display: flex;
-  // flex-direction: column;
-  // min-height: 100vh;
-  line-height: 1.5;
-}
 
-a {
-  text-decoration: none;
-}
 
-.container {
-  max-width: 1320px;
-  padding: 0 12px;
-  margin: 0 auto;
-}
 
 .header {
   background: $primary-light;
@@ -165,60 +149,10 @@ a {
   }
 }
 
-h2 {
-  font-weight: 700;
-  font-size: 48px;
-  color: $primary-dark;
-  text-align: center;
-}
-
-button {
-  cursor: pointer;
-  line-height: 1.5;
-  border: 0;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.mb-8 {
-  margin-bottom: 8px !important;
-}
-
-.mt-8 {
-  margin-top: 8px !important;
-}
-
-.mt-16 {
-  margin-top: 16px !important;
-}
-
-.mt-24 {
-  margin-top: 24px !important;
-}
-
-.pe-0 {
-  padding-right: 0 !important;
-}
-
-.ps-0 {
-  padding-left: 0 !important;
-}
 
 
 
-@media (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
-
-}
-
-@media (max-width: 576px) {
-  .container {
-    max-width: 372px;
-  }
+@include smobile {
 
   .header {
     display: none;
@@ -266,10 +200,6 @@ button {
       width: 50%;
       white-space: nowrap;
       border: 1px solid $white;
-      // &:first-child,
-      // &:last-child {
-      //   padding: 12px 62px;
-      // }
     }
 
     ul li a {

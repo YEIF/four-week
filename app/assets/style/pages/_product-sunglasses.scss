@@ -24,7 +24,7 @@
   h1{
     font-size: 42px;
     text-align: center;
-    font-family: "Roboto";
+    font-family: $en-font-family;
     font-weight: 500;
   }
   h2{
@@ -46,7 +46,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 24px;
-    font-family: "Roboto";
+    font-family: $en-font-family;
     font-weight: 400;
     p{
       color:$primary-light
@@ -67,7 +67,7 @@
 }
 
 
-@media (max-width: 992px) {
+@include pad {
   .sunglassesBanner{
     &-left{
       background-image: url(../images/product-header-sm-3.png);
@@ -86,10 +86,22 @@
 
 
 
-@media (max-width: 576px) {
+@include smobile {
   .sunglasses{
     padding-top: 40px;
     padding-bottom: 64px;
+    
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 24px;
+    }
+  }
+  .sunglassesBanner{
+    &-left,&-right{
+      height: 136px;
+    }
   }
   .sunglasses-card{
     gap: 24px 0;

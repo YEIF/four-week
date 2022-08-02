@@ -1,0 +1,29 @@
+
+.storebase-map{
+  width: calc((100% - 24px) / 3 *2);
+}
+
+@include pad {
+  .storebase-detail{
+    padding-top: 64px;
+    &-card{
+      gap: 24px 0;
+      &-item{
+        display: flex;
+        width: 100%;
+        gap: 0 24px;
+  
+      }
+    }
+  }
+
+  .storebase-map{
+    width: 100%;
+  }
+}
+
+@include smobile {
+  .storebase-detail-card-item{
+    flex-direction: column;
+  }
+}

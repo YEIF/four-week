@@ -1,0 +1,56 @@
+.faq {
+  padding-top: 96px;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    border-left: 8px solid #9F1213;
+    padding-left: 16px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: $black;
+    text-align: left;
+    padding-top: 32px;
+  }
+  h3{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  p{
+    padding-top: 8px;
+  }
+  .question{
+    padding-top: 24px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0;
+  }
+}
+
+
+@include pad{
+  .faq{
+    padding-top: 80px;
+  }
+}
+
+
+
+@include smobile  {
+  .faq{
+    padding-top: 40px;
+    h1 {
+      font-size: 24px;
+    }
+    h2{
+      padding-top: 24px;
+    }
+    .question{
+      gap: 24px 0;
+      padding-bottom: 64px;
+    }
+  }
+}
