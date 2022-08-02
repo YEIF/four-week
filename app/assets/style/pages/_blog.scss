@@ -17,6 +17,12 @@
     color: $white;
     padding: 13px 24px;
     display: block;
+    position: relative;
+
+    &:hover {
+      background-color: $primary-light;
+    }
+
   }
 
   .material-symbols-outlined {
@@ -157,7 +163,7 @@
 
 
 
-@include smobile{
+@include smobile {
   .blog-nav {
     display: none;
   }
@@ -168,21 +174,26 @@
     h1 {
       font-size: 24px;
     }
-    &-card{
-      a{
+
+    &-card {
+      a {
         width: 100%;
       }
     }
-    .blog-card-content{
+
+    .blog-card-content {
       width: 100%;
-      h2{
+
+      h2 {
         padding-top: 8px;
       }
-      p{
+
+      p {
         display: none;
       }
     }
-    &-card{
+
+    &-card {
       padding-bottom: 64px;
     }
   }
