@@ -18,11 +18,25 @@
     padding: 13px 24px;
     display: block;
     position: relative;
-
-    &:hover {
+    &:hover{
       background-color: $primary-light;
     }
+    // &:hover::after {
+    //   transform: scaleX(1);
+    // }
 
+    // &::after {
+    //   position: absolute;
+    //   width: 100%;
+    //   top: 100%;
+    //   right: 0;
+    //   content: '';
+    //   transform: scaleX(0);
+    //   transform-origin: left;
+    //   border-bottom: solid 2px $white;
+    //   transition: transform 0.3s ease-in-out;
+
+    // }
   }
 
   .material-symbols-outlined {
@@ -163,7 +177,7 @@
 
 
 
-@include smobile {
+@include smobile{
   .blog-nav {
     display: none;
   }
@@ -174,26 +188,21 @@
     h1 {
       font-size: 24px;
     }
-
-    &-card {
-      a {
+    &-card{
+      a{
         width: 100%;
       }
     }
-
-    .blog-card-content {
+    .blog-card-content{
       width: 100%;
-
-      h2 {
+      h2{
         padding-top: 8px;
       }
-
-      p {
+      p{
         display: none;
       }
     }
-
-    &-card {
+    &-card{
       padding-bottom: 64px;
     }
   }
