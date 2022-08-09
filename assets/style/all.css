@@ -629,13 +629,10 @@ button {
   .frame .tab.active::after {
     position: absolute;
     content: '';
-    top: 100%;
     left: 0;
     width: 100%;
     height: 8px;
-    -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-            transform: translateY(-100%);
+    bottom: 0;
     background-color: #AA0601; }
   .frame .tab:hover {
     border: 1px solid #AA0601; }
@@ -680,7 +677,6 @@ button {
     padding-top: 32px;
     gap: 80px 24px; }
     .optical-card li {
-      width: 25%;
       width: calc((100% - 72px) / 4); }
   .optical-card-content {
     display: -webkit-box;
@@ -1061,8 +1057,28 @@ button {
     padding: 13px 24px;
     display: block;
     position: relative; }
-    .blog-nav a:hover {
-      background-color: #AA0601; }
+    .blog-nav a::after {
+      position: absolute;
+      width: 0;
+      bottom: 10%;
+      left: 24px;
+      content: '';
+      border-bottom: solid 2px #FFFFFF;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .blog-nav a:hover::after {
+      width: calc(100% - 48px); }
+    .blog-nav a.ps-0 {
+      padding-left: 0; }
+      .blog-nav a.ps-0::after {
+        left: 0; }
+      .blog-nav a.ps-0:hover::after {
+        width: calc(100% - 24px); }
+    .blog-nav a.pe-0 {
+      padding-right: 0; }
+      .blog-nav a.pe-0:hover::after {
+        width: calc(100% - 24px); }
   .blog-nav .material-symbols-outlined {
     font-size: 40px;
     color: #FFFFFF; }
@@ -1089,11 +1105,11 @@ button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    .blog h3 time {
-      font-size: 16px;
-      font-weight: 500;
-      display: block;
-      color: #707070; }
+  .blog time {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    color: #707070; }
   .blog p {
     font-size: 20px;
     padding-top: 16px;
@@ -1109,6 +1125,16 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 64px 0; }
+  .blog-card-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .blog-card-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1138,27 +1164,22 @@ button {
       color: #650300;
       position: relative; }
       .blog .more a:hover::after {
-        -webkit-transform: scaleX(1);
-            -ms-transform: scaleX(1);
-                transform: scaleX(1); }
+        width: 100%; }
       .blog .more a::after {
         position: absolute;
-        width: 100%;
+        width: 0;
         top: 100%;
-        right: 0;
+        left: 0;
         content: '';
-        -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-                transform: scaleX(0);
-        -webkit-transform-origin: left;
-            -ms-transform-origin: left;
-                transform-origin: left;
         border-bottom: solid 2px #650300;
-        -webkit-transition: -webkit-transform 0.3s ease-in-out;
-        transition: -webkit-transform 0.3s ease-in-out;
-        -o-transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; }
+    .blog .more-mobile {
+      display: none; }
+      .blog .more-mobile a {
+        color: #555555;
+        text-decoration: none; }
 
 @media (max-width: 992px) {
   .blog {
@@ -1169,15 +1190,15 @@ button {
       font-size: 16px; }
     .blog p {
       font-size: 16px;
-      padding-top: 4px;
-      overflow: hidden;
-      -o-text-overflow: ellipsis;
-         text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 6;
-      -webkit-box-orient: vertical; }
+      padding-top: 4px; }
+      .blog p .mobile-text {
+        display: none; }
+      .blog p br {
+        display: none; }
     .blog .more {
       display: none; }
+      .blog .more-mobile {
+        display: inline; }
     .blog-card {
       gap: 24px 0;
       padding-top: 40px;
